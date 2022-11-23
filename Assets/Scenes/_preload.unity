@@ -203,7 +203,7 @@ MonoBehaviour:
   networkAddress: localhost
   maxConnections: 2
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+  playerPrefab: {fileID: 1480027675339556, guid: 11ed58b8a7271034aad8c59b2c73d37d,
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec45d9b2b9cd07a42a35cec038ca7ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameSceneName: Playground
+  _gameSceneName: DevGame
 --- !u!114 &1905287379
 MonoBehaviour:
   m_ObjectHideFlags: 0
