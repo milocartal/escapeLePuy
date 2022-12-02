@@ -9,8 +9,9 @@ namespace Mirror.Examples.NetworkRoom
     {
         Camera mainCam;
 
-        void Awake()
+        public void Awake()
         {
+            Debug.Log("AWAKEEE");
             mainCam = Camera.main;
         }
 
@@ -18,6 +19,7 @@ namespace Mirror.Examples.NetworkRoom
         {
             if (mainCam != null)
             {
+                Debug.Log("CAMERA");
                 // configure and make camera a child of player with 3rd person offset
                 mainCam.orthographic = false;
                 mainCam.transform.SetParent(transform);
