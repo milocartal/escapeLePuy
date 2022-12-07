@@ -80,6 +80,8 @@ namespace Mirror.Examples.NetworkRoom
         public override void OnStartLocalPlayer()
         {
             characterController.enabled = true;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         [Header("Movement Settings")]
@@ -105,14 +107,14 @@ namespace Mirror.Examples.NetworkRoom
             vertical = Input.GetAxis("Vertical");
 
             // Q and E cancel each other out, reducing the turn to zero
-            if (Input.GetKey(KeyCode.Q))
-                turn = Mathf.MoveTowards(turn, -maxTurnSpeed, turnSensitivity);
-            if (Input.GetKey(KeyCode.E))
-                turn = Mathf.MoveTowards(turn, maxTurnSpeed, turnSensitivity);
-            if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.E))
-                turn = Mathf.MoveTowards(turn, 0, turnSensitivity);
-            if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
-                turn = Mathf.MoveTowards(turn, 0, turnSensitivity);
+            // if (Input.GetKey(KeyCode.Q))
+            //     turn = Mathf.MoveTowards(turn, -maxTurnSpeed, turnSensitivity);
+            // if (Input.GetKey(KeyCode.E))
+            //     turn = Mathf.MoveTowards(turn, maxTurnSpeed, turnSensitivity);
+            // if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.E))
+            //     turn = Mathf.MoveTowards(turn, 0, turnSensitivity);
+            // if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
+            //     turn = Mathf.MoveTowards(turn, 0, turnSensitivity);
 
             if (isGrounded)
                 isFalling = false;

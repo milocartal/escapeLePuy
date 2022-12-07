@@ -206,7 +206,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 1480027675339556, guid: 11ed58b8a7271034aad8c59b2c73d37d,
     type: 3}
   autoCreatePlayer: 1
-  playerSpawnMethod: 0
+  playerSpawnMethod: 1
   spawnPrefabs: []
   timeInterpolationGui: 0
 --- !u!4 &1094704108
