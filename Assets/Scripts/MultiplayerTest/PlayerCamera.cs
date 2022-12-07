@@ -9,22 +9,21 @@ namespace Mirror.Examples.NetworkRoom
     {
         Camera mainCam;
 
-        public void Awake()
+        void Awake()
         {
-            Debug.Log("AWAKEEE");
-            mainCam = Camera.main;
+            Debug.Log("main camera");
+            mainCam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         }
 
         public override void OnStartLocalPlayer()
         {
             if (mainCam != null)
             {
-                Debug.Log("CAMERA");
                 // configure and make camera a child of player with 3rd person offset
                 mainCam.orthographic = false;
                 mainCam.transform.SetParent(transform);
-                mainCam.transform.localPosition = new Vector3(0f, 3f, -8f);
-                mainCam.transform.localEulerAngles = new Vector3(10f, 0f, 0f);
+                mainCam.transform.localPosition = new Vector3(0f, 0.5f, 0f);
+                mainCam.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             }
         }
 
